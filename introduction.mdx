@@ -1,0 +1,104 @@
+---
+title: Introduction to Maycon Mota
+description: Discover Maycon Mota, a versatile documentation platform designed to help you organize and manage project documentation efficiently.
+---
+
+## Overview
+
+Welcome to Maycon Mota, your go-to platform for creating, organizing, and managing project documentation. You streamline workflows by centralizing all docs in one space, supporting MDX for rich, interactive content. Benefit from version control, collaborative editing, and seamless publishing to keep your teams aligned.
+
+## Key Features
+
+Maycon Mota empowers you with powerful tools for documentation management.
+
+<Columns cols={3}>
+  <Card title="MDX-Powered Pages" icon="book-open" href="/docs/mdx-guide">
+    Build interactive docs with components like `<Callout>` and `<Steps>`. Add diagrams and code examples effortlessly.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="/docs/versioning">
+    Track changes, revert updates, and collaborate without conflicts using integrated Git-like features.
+  </Card>
+  <Card title="Collaborative Editing" icon="users" href="/docs/collaboration">
+    Invite team members, assign roles, and review changes in real-time for efficient teamwork.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Get up and running in minutes.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://mayconmota.com` with your email. Verify your account to unlock full features.
+  </Step>
+  <Step title="New Workspace" icon="plus">
+    Create a new documentation space for your project. Name it and select your primary color `{ #3B82F6 }`.
+  </Step>
+  <Step title="Add First Page" icon="file-text">
+    Generate your `introduction.mdx` using the built-in templates. Customize with components.
+  </Step>
+  <Step title="Publish" icon="globe">
+    Preview and deploy your docs. Share the live URL with your team.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Example: Embed Maycon Mota docs in your app
+  import { DocsEmbed } from '@mayconmota/embed';
+
+  function App() {
+    return (
+      <DocsEmbed workspaceId="your-workspace-id" page="introduction" />
+    );
+  }
+  ```
+  ```python
+  # Example: Fetch latest docs via API
+  import requests
+
+  response = requests.get(
+    'https://api.mayconmota.com/workspaces/your-workspace/pages/introduction',
+    headers={'Authorization': 'Bearer YOUR_API_KEY'}
+  )
+  print(response.json())
+  ```
+</CodeGroup>
+
+## Brand Guidelines
+
+Follow these guidelines to maintain consistency across your documentation.
+
+<Callout kind="info">
+  Use the primary brand color `{ #3B82F6 }` for headings, buttons, and accents. Pair it with neutral grays for readability. Avoid using it for text to ensure accessibility.
+</Callout>
+
+<Expandable title="Full Color Palette" default-open="false">
+  - Primary: `{ #3B82F6 }`
+  - Secondary: `{ #1D4ED8 }`
+  - Success: `{ #10B981 }`
+  - Danger: `{ #EF4444 }`
+</Expandable>
+
+## Next Steps
+
+Explore more to supercharge your documentation.
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="zap" href="/quickstart">
+    Dive into advanced setup and first project.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your workspace with API keys and roles.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    Stay updated with the latest releases.
+  </Card>
+  <Card title="Help Center" icon="help-circle" href="/help-center">
+    FAQs and support resources.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Customize your space with the brand color `{ #3B82F6 }` in settings. Start building today!
+</Callout>

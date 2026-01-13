@@ -1,0 +1,136 @@
+---
+title: Core Features
+description: Explore the main capabilities of Maycon Mota to streamline your documentation workflow and enhance project organization.
+---
+
+## Overview
+
+Maycon Mota empowers you to build comprehensive documentation spaces with intuitive tools for creation, collaboration, version management, and discovery. You can organize project docs, API references, and guides in a single, searchable hub.
+
+<Columns cols={2}>
+  <Card title="Page Creation" icon="file-text" href="#creating-pages">
+    Structure your docs with nested pages and rich MDX content.
+  </Card>
+  <Card title="Team Collaboration" icon="users" href="#collaboration">
+    Share securely with teams and external reviewers.
+  </Card>
+  <Card title="Version History" icon="git-branch" href="#version-control">
+    Track changes with full commit history and rollbacks.
+  </Card>
+  <Card title="Search Tools" icon="search" href="#search-tools">
+    Find content instantly across your entire space.
+  </Card>
+</Columns>
+
+## Creating and Structuring Documentation Pages
+
+You start by creating pages directly in the editor. Use the sidebar to nest pages under sections, forming a logical hierarchy. Maycon Mota supports full MDX, so embed components like `<Callout>` or code blocks seamlessly.
+
+<Steps>
+  <Step title="New Page" icon="plus">
+    Click the `+ New Page` button in the sidebar.
+
+    Choose a parent folder for organization.
+  </Step>
+  <Step title="Edit Content" icon="edit-3">
+    Write in Markdown or switch to visual mode.
+
+````mdx
+## Your Section
+
+<Callout kind="info">
+  Add interactive elements here.
+</Callout>
+````
+
+  </Step>
+  <Step title="Publish" icon="upload">
+    Save and publish. Changes go live instantly.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use YAML frontmatter for SEO: `title` and `description` fields optimize discoverability.
+</Callout>
+
+## Collaboration and Sharing Options
+
+Invite team members or share read-only links. You control permissions granularly, from view-only to full edit access.
+
+<Tabs>
+  <Tab title="Team Invite" icon="users">
+    Go to space settings > Members.
+
+    Add emails and assign roles: Admin, Editor, Viewer.
+
+    <Image
+      src="https://via.placeholder.com/600x300/3B82F6/white?text=Team+Invite"
+      alt="Team invite interface"
+      width="600"
+      height="300"
+    />
+  </Tab>
+  <Tab title="Public Share" icon="share-2">
+    Generate a shareable link from any page.
+
+    Toggle public access or password-protect for external reviews.
+  </Tab>
+  <Tab title="Embed" icon="code">
+    Embed pages in your site or Notion.
+
+    Copy the iframe code:
+
+````html
+<iframe src="https://docs.example.com/your-space/page" width="100%" height="600"></iframe>
+````
+
+  </Tab>
+</Tabs>
+
+## Version Control and History Tracking
+
+Every edit creates a commit, like Git. You view diffs, restore versions, or compare changes.
+
+<Expandable title="View History" default-open="true">
+  Right-click a page > `View History`.
+
+  Select a version to preview or restore.
+
+  ```mermaid
+  graph TD
+      A[Current] --> B[Previous]
+      B --> C[Older]
+      C --> D[Initial]
+  ```
+</Expandable>
+
+<Expandable title="Advanced: Branching">
+  Create branches for experiments without affecting main docs.
+
+  Merge via pull requests with team approval.
+</Expandable>
+
+## Search and Filtering Tools
+
+Navigate large docs effortlessly. The global search indexes all content, supporting full-text and filters.
+
+| Filter Type | Description | Example |
+|-------------|-------------|---------|
+| By Tag | Filter by custom labels | `api`, `guide` |
+| By Date | Recent changes only | `>2024-01-01` |
+| By Author | Team member contributions | `@username` |
+
+<CodeGroup tabs="Search API,Advanced Query">
+  ```javascript
+  // Search via API
+  const results = await fetch('https://api.example.com/search?q=authentication');
+  ```
+  ```javascript
+  // Filter with params
+  const advanced = await fetch('https://api.example.com/search?q=auth&filter=tag:api&after=2024-01-01');
+  ```
+</CodeGroup>
+
+<Callout kind="success">
+  Pro tip: Pin frequent searches to your dashboard for one-click access.
+</Callout>

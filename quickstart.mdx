@@ -1,0 +1,152 @@
+---
+title: Quickstart Guide
+description: Get up and running with Maycon Mota in just a few minutes by setting up your account and creating your first documentation space.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Optional: Existing project files (Markdown, MDX, or Git repository) to import
+
+<Callout kind="info">
+
+Maycon Mota is a web-based platform—no downloads required. Access it at `https://dashboard.mayconmota.com`.
+
+</Callout>
+
+## Sign Up and Create Your Account
+
+Follow these steps to create your free account.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Open your browser and navigate to `https://dashboard.mayconmota.com`.
+  </Step>
+  <Step title="Start Registration" icon="user-plus">
+    Click **Sign Up** and enter your email address, full name, and a secure password.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for a verification email from Maycon Mota. Click the link to confirm your account.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to the dashboard, enter your credentials, and log in. You'll land on the welcome screen.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+
+Choose a strong password with at least 12 characters, including uppercase, lowercase, numbers, and symbols.
+
+</Callout>
+
+## Set Up Your Default Documentation Space
+
+After logging in, create your first space to organize project docs.
+
+<Steps>
+  <Step title="Create New Space" icon="plus">
+    Click **New Space** in the top-right corner. Name it `My Project Docs` and select **Default** template.
+  </Step>
+  <Step title="Customize Settings" icon="settings">
+    Add a description like "Documentation for my React app" and set visibility to **Public** or **Private**.
+  </Step>
+  <Step title="Save and Enter" icon="save">
+    Click **Create**. You're now inside your space with a blank homepage ready for content.
+  </Step>
+</Steps>
+
+## Navigate the Dashboard
+
+The dashboard provides quick access to key areas. Use these tabs to explore.
+
+<Tabs>
+  <Tab title="Editor" icon="edit-3">
+    The main editor lets you write MDX docs. Create new pages via **+ New Page**.
+    
+    Key features:
+    
+    | Action | Shortcut |
+    |--------|----------|
+    | New Page | `Ctrl+P` |
+    | Preview | `Ctrl+E` |
+    | Publish | `Ctrl+S` |
+  </Tab>
+  <Tab title="Pages" icon="file-text">
+    View all pages in a tree structure. Drag to reorder or nest pages.
+  </Tab>
+  <Tab title="Settings" icon="sliders">
+    Manage space settings, themes, and integrations like GitHub sync.
+  </Tab>
+</Tabs>
+
+## Import Initial Project Files
+
+Populate your space with existing files.
+
+<Tabs>
+  <Tab title="GitHub Repo" icon="github">
+    <Steps>
+      <Step title="Connect GitHub">
+        Go to **Settings > Integrations > GitHub** and authorize the app.
+      </Step>
+      <Step title="Import Repo">
+        Enter your repo URL (e.g., `https://github.com/yourusername/my-project-docs`) and select branch `main`.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Local Files" icon="upload">
+    Drag and drop Markdown files directly into the **Files** panel, or use the upload button.
+    
+    Example Markdown structure for import:
+    
+    <CodeGroup tabs="Home.mdx,API.mdx">
+    ````mdx
+    ---
+    title: Home
+    ---
+    
+    ## Welcome
+    
+    This is your project homepage.
+    ````
+    
+    ````mdx
+    ---
+    title: API Reference
+    ---
+    
+    ## Endpoints
+    
+    Use `https://api.example.com/v1/docs` for queries.
+    ````
+    </CodeGroup>
+  </Tab>
+</Tabs>
+
+## Next Steps
+
+Congratulations! You've set up Maycon Mota. Dive deeper with these resources.
+
+<Columns cols={2}>
+  <Card title="Customize Your Space" icon="palette" href="/configuration">
+    Learn advanced themes, custom domains, and SEO settings.
+  </Card>
+  <Card title="Collaborate Securely" icon="users" href="/authentication">
+    Set up team invites, roles, and secure access.
+  </Card>
+  <Card title="Publish and Share" icon="share-2" href="#">
+    Deploy your docs live and embed them anywhere.
+  </Card>
+  <Card title="Explore Examples" icon="book-open" href="/introduction">
+    See full documentation templates and best practices.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+
+Your first space is ready. Start editing pages now and publish when complete!
+
+</Callout>
