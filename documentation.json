@@ -18,7 +18,8 @@
             "title": "Inicio",
             "path": "inicio"
           }
-        ]
+        ],
+        "icon": "airplay"
       }
     ]
   }
