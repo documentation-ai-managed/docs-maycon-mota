@@ -1,0 +1,248 @@
+---
+title: "Página de início (demo de MDX)"
+description: "Página de demonstração em português com exemplos de componentes MDX usados na documentação."
+---
+
+## Visão geral
+
+Esta página é um playground em português para você explorar os principais componentes MDX usados na documentação. Cada seção mostra um tipo de componente com um exemplo simples e seguro, sem depender de funcionalidades específicas do produto.
+
+Use esta página como referência visual quando estiver escrevendo ou ajustando outras páginas.
+
+## Alertas e mensagens (Callout)
+
+Use `Callout` para destacar informações importantes, dicas, avisos ou confirmações de sucesso. Abaixo você encontra exemplos dos tipos mais usados.
+
+<Callout kind="info">
+
+Use este tipo para informações neutras ou contextuais, como definir termos, explicar pré-requisitos ou orientar o leitor para outra página, por exemplo a introdução em `[Introduction](/introduction)`.
+
+</Callout>
+
+<Callout kind="tip">
+
+Dicas são úteis para sugerir caminhos mais rápidos, boas práticas ou atalhos de teclado, como usar `<kbd>Ctrl</kbd> + <kbd>F</kbd>` para encontrar termos nesta página.
+
+</Callout>
+
+<Callout kind="alert">
+
+Use este tipo para avisos que exigem atenção extra, como configurações que podem impactar outros ambientes ou comportamentos inesperados conhecidos.
+
+</Callout>
+
+<Callout kind="success">
+
+Mensagens de sucesso ajudam a confirmar que o leitor completou uma etapa importante, como finalizar um tutorial ou validar um comando.
+
+</Callout>
+
+## Passo a passo guiado (Steps)
+
+Use `Steps` quando quiser guiar o leitor por um fluxo linear, como um mini tutorial. Cada `Step` pode conter texto, listas e blocos de código.
+
+<Steps>
+
+  <Step title="Planejar o conteúdo" icon="book-open">
+
+  Comece definindo o objetivo da página e o público-alvo. Isso ajuda a decidir quais componentes usar.
+
+  - Anote o que o leitor precisa saber antes
+  - Liste o que ele terá aprendido ao final
+  - Evite incluir detalhes que não contribuem para esse objetivo
+
+  </Step>
+
+  <Step title="Escolher os componentes" icon="settings">
+
+  Selecione apenas os componentes que realmente ajudam na compreensão.
+
+  - Use `Callout` para destaques
+  - Use `Steps` para fluxos sequenciais
+  - Use `Tabs` para variações de plataforma ou linguagem
+
+  </Step>
+
+  <Step title="Adicionar exemplos mínimos" icon="code">
+
+  Inclua exemplos simples, fáceis de copiar e colar, que não dependam de configuração complexa.
+
+  ```bash
+  # Exemplo neutro de comando em shell
+  echo "Olá, documentação!"
+  ```
+
+  </Step>
+
+</Steps>
+
+## Abas para variações (Tabs)
+
+Use `Tabs` para apresentar variações de um mesmo conteúdo, como instruções para plataformas diferentes ou dois formatos de uso. Isso evita repetir seções inteiras.
+
+<Tabs>
+
+  <Tab title="Linha de comando" icon="terminal">
+
+  Use este padrão para demonstrar o mesmo fluxo em diferentes interfaces, começando com o terminal.
+
+  ```bash
+  # Simulação de comando de inicialização
+  ./minha-aplicacao --modo=demo
+  ```
+
+  </Tab>
+
+  <Tab title="Interface gráfica" icon="monitor">
+
+  Nesta aba você pode descrever o mesmo processo usando uma interface visual.
+
+  - Abra a aplicação em modo demo
+  - Acesse o menu "Arquivo"
+  - Clique em "Novo projeto"
+
+  </Tab>
+
+  <Tab title="API (conceitual)" icon="code">
+
+  Use abas adicionais para mostrar uma visão conceitual, sem depender de um endpoint específico.
+
+  ```bash
+  # Representação genérica de uma chamada de API
+  curl https://api.exemplo.dev/recurso \
+    -H "Authorization: Bearer SEU_TOKEN" \
+    -H "Content-Type: application/json"
+  ```
+
+  </Tab>
+
+</Tabs>
+
+## Layout em colunas com cartões (Columns + Card)
+
+Use `Columns` e `Card` para criar grades de navegação ou blocos comparáveis de informação. O exemplo abaixo mostra três cartões genéricos.
+
+Antes de usar este padrão em produção, escolha títulos e descrições alinhados com a estrutura real do seu conteúdo.
+
+<Columns cols={3}>
+
+  <Card
+    title="Começar pelo básico"
+    href="/introduction"
+    icon="home"
+    cta="Ver introdução"
+  >
+
+  Ideal para novos usuários que querem entender o propósito geral da documentação antes de avançar para guias mais detalhados.
+
+  </Card>
+
+  <Card
+    title="Ir direto ao passo a passo"
+    href="/quickstart"
+    icon="rocket"
+    cta="Abrir quickstart"
+  >
+
+  Um caminho rápido para configurar um ambiente de teste com exemplos simples, sem abordar todos os detalhes avançados.
+
+  </Card>
+
+  <Card
+    title="Explorar conceitos centrais"
+    href="/features"
+    icon="book-open"
+  >
+
+  Use esta área para explicar conceitos recorrentes na documentação, como recursos principais, limitações e terminologia.
+
+  </Card>
+
+</Columns>
+
+## Exemplos de código em várias linguagens (CodeGroup)
+
+Use `CodeGroup` quando quiser mostrar o mesmo exemplo em linguagens ou sintaxes diferentes, sem sobrecarregar a página com vários blocos de código soltos.
+
+O exemplo abaixo demonstra uma operação genérica de saudação em duas linguagens.
+
+<CodeGroup tabs="JavaScript,Python" show-lines={true}>
+
+```javascript
+// Exemplo genérico em JavaScript
+function saudar(nome) {
+  return `Olá, ${nome}!`
+}
+
+console.log(saudar("Mundo"))
+```
+
+```python
+# Exemplo genérico em Python
+def saudar(nome: str) -> str:
+    return f"Olá, {nome}!"
+
+print(saudar("Mundo"))
+```
+
+</CodeGroup>
+
+## Tabelas simples para comparações
+
+Use tabelas markdown para comparações diretas e curtas. Elas são úteis para resumir comportamentos, estados ou tipos de conteúdo.
+
+A tabela abaixo compara alguns componentes básicos usados nesta página:
+
+| Componente | Uso principal                        | Quando preferir                       |
+| ---------- | ------------------------------------ | ------------------------------------- |
+| `Callout`  | Destacar avisos e dicas              | Quando a informação não é o fluxo em si |
+| `Steps`    | Guiar o leitor por um processo       | Quando a ordem importa                |
+| `Tabs`     | Mostrar variações do mesmo conteúdo  | Quando há múltiplas plataformas       |
+| `Card`     | Destacar links ou blocos de conteúdo | Quando criar grades de navegação      |
+
+## Conteúdo recolhível (Expandable)
+
+Use `Expandable` quando quiser esconder detalhes opcionais, perguntas frequentes ou explicações longas que não sejam essenciais para todos os leitores.
+
+<ExpandableGroup>
+
+  <Expandable title="Quando usar páginas de demonstração como esta?" default-open="true">
+
+  Páginas de demonstração são úteis para:
+
+  - Testar componentes novos de MDX
+  - Experimentar variações de layout
+  - Servir como referência interna de estilos e padrões
+
+  Elas não precisam refletir funcionalidades reais do produto, mas devem manter exemplos tecnicamente válidos.
+
+  </Expandable>
+
+  <Expandable title="Boas práticas ao criar exemplos genéricos">
+
+  Alguns cuidados ajudam a manter os exemplos úteis por mais tempo:
+
+  - Evite mencionar datas, versões específicas ou promessas de roadmap
+  - Prefira comandos e trechos de código autoexplicativos
+  - Documente claramente que se trata de conteúdo demonstrativo
+
+  ```bash
+  # Mensagem clara de que é apenas um exemplo
+  echo "Este é um exemplo demonstrativo, não um comando de produção."
+  ```
+
+  </Expandable>
+
+  <Expandable title="Como reaproveitar estes padrões em outras páginas?">
+
+  Você pode copiar seções desta página e adaptá-las:
+
+  - Troque textos genéricos por instruções específicas
+  - Atualize links para apontarem às páginas corretas
+  - Ajuste o número de colunas, abas ou passos conforme necessário
+
+  Sempre revise a página final para garantir que tudo está consistente com o restante da documentação.
+
+  </Expandable>
+
+</ExpandableGroup>

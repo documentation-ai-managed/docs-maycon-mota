@@ -119,6 +119,15 @@
             "icon": "history"
           }
         ]
+      },
+      {
+        "tab": "Teste documentação",
+        "pages": [
+          {
+            "title": "Inicio",
+            "path": "inicio"
+          }
+        ]
       }
     ]
   }
